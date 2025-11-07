@@ -1,0 +1,112 @@
+<!-- Define o tipo de documento e a linguagem principal -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define o conjunto de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Faz o layout se ajustar ao tamanho da tela (importante para celular/tablet) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Portal ENEM Interativo – Questão de Química Orgânica</title>
+
+    <!-- Importa o arquivo CSS externo para estilizar a página -->
+    <link rel="stylesheet" href="css/questao10.css">
+
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="shortcut icon" href="https://www.ifpb.edu.br/prpipg/pesquisa/imagens-pesquisa/ifpb.png/@@images/0609b1d7-4a7d-41be-bd18-081ecb35eb9e.png" type="image/x-icon">
+
+    <!-- Importa a fonte “Poppins” do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Importa o arquivo JavaScript externo e só executa depois que o HTML for carregado -->
+    <script src="js/questao10.js" defer></script>
+</head>
+
+<body>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Primeira seção: card principal da questão -->
+        <section class="card">
+            
+            <!-- Cabeçalho do card com o logo e botão "home" -->
+            <header>
+                <!-- Logo do IFPB -->
+                <img src="https://www.ifpb.edu.br/prpipg/pasta-imagens-da-prpipg/logoifpb-1.png" alt="Logo IFPB" class="logo">
+                <!-- Botão de retorno para a página inicial -->
+                <a href="index.html" class="home-btn">🏠</a>
+            </header>
+
+            <!-- Título principal da questão -->
+            <h2 class="titulo">⚗️ Questão de Química Orgânica 🧪</h2>
+
+            <!-- Enunciado da questão -->
+            <h2>
+                <strong>(ENEM - 2023), (Questão 133 / prova Azul ):</strong> O descarte de detergentes comuns nos esgotos domésticos ocasiona a formação de uma camada de espuma que impede a entrada de oxigênio na água. 
+                Os microrganismos que vivem nessas águas não são capazes de quebrar moléculas ramificadas, ocorrendo assim um desequilíbrio ambiental nos rios. 
+                A fórmula a seguir representa a estrutura química de um tensoativo presente na composição de um detergente não biodegradável.
+            </h2>
+
+            <!-- Pergunta -->
+            <h2>Qual modificação química na estrutura desse tensoativo o tornaria um detergente biodegradável?</h2>
+
+            <!-- Imagem da estrutura química -->
+            <div class="imagem">
+                <img src="https://qcon-assets-production.s3.amazonaws.com/images/provas/101194/Captura_de%20Tela%20%283494%29.png" alt="Estrutura do Tensoativo">
+            </div>
+
+            <!-- Título antes das alternativas -->
+            <h2>Alternativas:</h2>
+
+            <!-- Formulário com as alternativas -->
+            <form id="formQuestao" class="formulario">
+                
+                <!-- Alternativa A -->
+                <label class="opcao">
+                    <input type="radio" name="alternativa" value="a">
+                    <span class="texto-opcao">a) Retirar a parte polar da molécula.</span>
+                </label>
+
+                <!-- Alternativa B -->
+                <label class="opcao">
+                    <input type="radio" name="alternativa" value="b">
+                    <span class="texto-opcao">b) Eliminar as insaturações do anel aromático.</span>
+                </label>
+
+                <!-- Alternativa C -->
+                <label class="opcao">
+                    <input type="radio" name="alternativa" value="c">
+                    <span class="texto-opcao">c) Trocar o grupo aniônico por um grupo neutro.</span>
+                </label>
+
+                <!-- Alternativa D -->
+                <label class="opcao">
+                    <input type="radio" name="alternativa" value="d">
+                    <span class="texto-opcao">d) Alterar o grupo aniônico por um grupo catiônico.</span>
+                </label>
+
+                <!-- Alternativa E -->
+                <label class="opcao">
+                    <input type="radio" name="alternativa" value="e">
+                    <span class="texto-opcao">e) Modificar a cadeia carbônica para cadeia normal.</span>
+                </label>
+
+                <!-- Botão que o usuário clica para verificar a resposta -->
+                <button type="button" id="btnVerificar">Verificar Resposta</button>
+            </form>
+
+            <!-- Espaço onde o feedback da resposta (certa ou errada) será exibido -->
+            <h2 id="feedback"></h2>
+        </section>
+
+        <!-- Segunda seção: informações adicionais sobre o tema da questão -->
+        <section class="card2">
+            <h2>Informações Extras!!!</h2>
+            <h2><strong>Assunto:</strong> Funções Orgânicas</h2>
+            <h2><strong>Tema:</strong> Química Orgânica — Compostos tensoativos, detergentes, gorduras, saponificação</h2>
+            <h2><strong>Dificuldade:</strong> Média</h2>
+        </section>
+    </main>
+</body>
+</html>
