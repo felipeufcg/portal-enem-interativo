@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoEstudo - Ecologia para o ENEM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#16a34a',
+                        'primary-dark': '#15803d',
+                        'primary-light': '#22c55e',
+                        'beige': '#f5f5dc',
+                        'beige-dark': '#e8dcc4',
+                        'black-main': '#1a1a1a',
+                        'black-light': '#2d2d2d',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="css/questao9.css">
+    <link rel="shortcut icon" href="img/9.png" type="image/x-icon">
+</head>
+
+<body class="bg-beige min-h-screen">
+    
+    <div id="layout-container">
+        
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-transparent">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex items-center justify-between h-20">
+                    <a href="#home" class="flex items-center gap-3 group page-link" data-page="home">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-primary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                            <i data-lucide="leaf" class="w-10 h-10 text-primary relative"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-primary">EcoEstudo</h1>
+                            <p class="text-xs text-primary">Ecologia para o ENEM</p>
+                        </div>
+                    </a>
+
+                    <nav class="hidden md:flex items-center gap-2" id="desktop-nav">
+                        <a href="#home" class="nav-item-desktop page-link" data-page="home"><i data-lucide="leaf" class="w-5 h-5"></i> <span class="font-medium">Home</span></a>
+                        <a href="#resumo" class="nav-item-desktop page-link" data-page="resumo"><i data-lucide="book-open" class="w-5 h-5"></i> <span class="font-medium">Resumo</span></a>
+                        <a href="#questoes" class="nav-item-desktop page-link" data-page="questoes"><i data-lucide="file-question" class="w-5 h-5"></i> <span class="font-medium">Questões ENEM</span></a>
+                    </nav>
+
+                    <button id="mobile-menu-button" class="md:hidden p-2 text-beige hover:text-primary transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon-open"></i>
+                        <i data-lucide="x" class="w-6 h-6 hidden" id="menu-icon-close"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-black-main border-t border-black-light">
+                <nav class="container mx-auto px-4 py-4 space-y-2">
+                    <a href="#home" class="nav-item-mobile page-link" data-page="home"><i data-lucide="leaf" class="w-5 h-5"></i> <span class="font-medium">Home</span></a>
+                    <a href="#resumo" class="nav-item-mobile page-link" data-page="resumo"><i data-lucide="book-open" class="w-5 h-5"></i> <span class="font-medium">Resumo</span></a>
+                    <a href="#questoes" class="nav-item-mobile page-link" data-page="questoes"><i data-lucide="file-question" class="w-5 h-5"></i> <span class="font-medium">Questões ENEM</span></a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="pt-20">
+            
+            <section id="page-home" class="page active">
+                <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black-main via-black-light to-black-main overflow-hidden">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <div class="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+                        <div class="absolute bottom-20 right-10 w-96 h-96 bg-primary-dark rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-delayed-2"></div>
+                        <div class="absolute top-1/2 left-1/2 w-80 h-80 bg-primary-light rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse-delayed-4"></div>
+                    </div>
+
+                    <div class="container mx-auto px-4 md:px-6 relative z-10">
+                        <div class="max-w-5xl mx-auto text-center">
+                            <div class="animate-fade-in-up">
+                                <div class="flex justify-center mb-6">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-primary rounded-full blur-2xl opacity-50"></div>
+                                        <i data-lucide="leaf" class="w-24 h-24 text-primary relative animate-pulse"></i>
+                                    </div>
+                                </div>
+                                
+                                <h1 class="text-5xl md:text-7xl font-bold text-beige mb-6 leading-tight">
+                                    Domine <span class="text-primary">Ecologia</span>
+                                    <br>
+                                    para o ENEM
+                                </h1>
+                                
+                                <p class="text-xl md:text-2xl text-beige-dark mb-8 max-w-3xl mx-auto">
+                                    Aprenda os conceitos fundamentais de ecologia com conteúdo organizado e questões práticas
+                                </p>
+
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                    <a href="#resumo" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition-all shadow-lg shadow-green-500/50 flex items-center gap-2 group page-link" data-page="resumo">
+                                        Começar a Estudar
+                                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    
+                                    <a href="#questoes" class="px-8 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold rounded-full transition-all page-link" data-page="questoes">
+                                        Praticar Questões
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                </section>
+
+            <section id="page-resumo" class="page hidden py-12">
+                <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+                    <div class="text-center mb-16">
+                        <div class="inline-block p-4 bg-green-600/20 rounded-full mb-6">
+                            <i data-lucide="tree-pine" class="w-12 h-12 text-green-600"></i>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-bold text-black-main mb-4">
+                            Resumo de Ecologia
+                        </h1>
+                        <p class="text-xl text-black-light max-w-2xl mx-auto">
+                            Conteúdo completo e organizado para você dominar ecologia para o ENEM
+                        </p>
+                    </div>
+
+                    <div id="resumo-acordeao" class="space-y-6">
+                        
+                        <div class="acordeon-section bg-white rounded-2xl shadow-lg overflow-hidden" data-section-id="1">
+                            <button class="acordeon-header w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg">
+                                        <i data-lucide="tree-pine" class="w-7 h-7 text-white"></i>
+                                    </div>
+                                    <h2 class="text-2xl font-bold text-black-main text-left">Ecossistemas</h2>
+                                </div>
+                                <i data-lucide="chevron-down" class="w-6 h-6 text-green-600 transition-transform"></i>
+                            </button>
+                            <div class="acordeon-content hidden border-t border-gray-100" style="height: 0;">
+                                <div class="p-6 space-y-6">
+                                    <div class="bg-beige rounded-xl p-6 border-l-4 border-green-600">
+                                        <h3 class="text-xl font-bold text-black-main mb-3">O que são Ecossistemas?</h3>
+                                        <p class="text-black-light leading-relaxed whitespace-pre-line">Ecossistemas são conjuntos formados por comunidades de seres vivos (fatores bióticos) que interagem entre si e com o ambiente físico (fatores abióticos). Incluem florestas, oceanos, desertos e até ambientes urbanos.</p>
+                                    </div>
+                                    </div>
+                            </div>
+                        </div>
+                        </div>
+                    
+                    </div>
+            </section>
+
+            <section id="page-questoes" class="page hidden py-12">
+                <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <div class="text-center mb-10">
+                        <i data-lucide="trophy" class="w-12 h-12 text-green-600 mx-auto mb-4"></i>
+                        <h1 class="text-4xl md:text-5xl font-bold text-black-main">Questões ENEM de Ecologia</h1>
+                        <p class="text-lg text-black-light mt-2" id="question-counter">Teste seus conhecimentos: Questão 1 de 10</p>
+                    </div>
+
+                    <div id="quiz-container">
+                        </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/questao9.js"></script>
+</body>
+</html>
