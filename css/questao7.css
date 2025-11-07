@@ -1,0 +1,211 @@
+/* IMPORTAÇÃO DE FONTE PARA O TÍTULO */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== TOPO COM GIF ===== */
+.topo {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.gif-fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* CABEÇALHO (LOGO E NOME) */
+.header {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 10;
+}
+
+.logo-img {
+  height: 80px;
+}
+
+.titulo h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+/* TEXTO NO TOPO */
+.texto-topo {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.texto-topo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.texto-topo p {
+  font-size: 22px;
+  color: #f1f1f1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== CONTEÚDO ABAIXO DO GIF ===== */
+body {
+  background: linear-gradient(to bottom, #001f3f, #003366, #00509e);
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* SEÇÃO DE CONTEÚDO */
+.conteudo {
+  max-width: 900px;
+  margin: 100px auto;
+  background-color: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* TEXTO INTRODUTÓRIO */
+.intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  text-align: center;
+  color: #87cefa;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 15px;
+  color: #f1f1f1;
+}
+
+/* ===== QUESTÃO ===== */
+.questao {
+  margin-top: 30px;
+}
+
+.questao h2 {
+  color: #00bfff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.questao p,
+.questao li {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 15px;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+.questao ul {
+  margin-left: 20px;
+}
+
+/* ===== FORMULÁRIO ===== */
+form label {
+  display: block;
+  margin: 8px 0;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+form label:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+button {
+  background-color: #00bfff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #007acc;
+}
+
+/* ===== RESULTADOS (AGORA PARA TODAS AS QUESTÕES) ===== */
+.questao p[id^="resultado"] {
+  font-size: 22px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.correto { color: #00ff88; font-weight: bold; }
+.errado { color: #ff4c4c; font-weight: bold; }
+.aviso { color: #ffd700; font-weight: bold; }
+
+/* bloco de explicações */
+.questao div[id^="explicacoes"] {
+  margin-top: 25px;
+  background-color: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.questao div[id^="explicacoes"] ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.questao div[id^="explicacoes"] li {
+  margin-bottom: 8px;
+}
+
+.correta { color: #00ff88; }
+
+.oculto { display: none; }
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.texto-topo, .conteudo {
+  animation: fadeIn 1.2s ease forwards;
+}
