@@ -1,0 +1,154 @@
+/* === CONFIGURAÇÕES GERAIS DO BODY === */
+body {
+    /* Define a fonte principal usada no site */
+    font-family: 'Poppins', 'Avant Garde', 'Century Gothic', sans-serif;
+    /* Define a cor de fundo da página */
+    background-color: #bfc5ca;
+    /* Remove margens e espaçamentos padrão do navegador */
+    margin: 0;
+    padding: 0;
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+main {
+    /* Coloca os cards lado a lado (horizontalmente) */
+    display: flex;
+    justify-content: center; /* Centraliza os cards na tela */
+    gap: 40px; /* Espaço entre os cards */
+    margin: 40px; /* Margem externa ao redor do conteúdo */
+}
+
+/* === ESTILIZAÇÃO DOS CARDS === */
+.card, .card2 {
+    /* Fundo em degradê claro (de cima para baixo) */
+    background: linear-gradient(to bottom, #f5f6f7, #e9eced);
+    /* Sombra discreta para dar profundidade */
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    /* Bordas arredondadas */
+    border-radius: 8px;
+    /* Espaçamento interno */
+    padding: 25px;
+    /* Largura de cada card (45% para que dois caibam lado a lado) */
+    width: 45%;
+}
+
+/* === CABEÇALHO DO CARD === */
+header {
+    display: flex; /* Alinha logo e botão na mesma linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Um em cada canto */
+    background-color: #f6f6f6; /* Fundo levemente cinza */
+    padding: 10px; /* Espaço interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.logo {
+    height: 50px; /* Altura do logotipo */
+}
+
+/* Botão de retorno (home) */
+.home-btn {
+    font-size: 22px; /* Tamanho do emoji/caráter */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #2c3e50; /* Cor escura do ícone */
+}
+
+/* === TÍTULO PRINCIPAL === */
+.titulo {
+    font-size: 28px; /* Tamanho grande do título */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima */
+}
+
+/* === IMAGEM DA QUESTÃO === */
+.imagem {
+    display: flex; /* Centraliza a imagem */
+    justify-content: center;
+    margin: 20px 0; /* Espaço vertical */
+}
+
+.imagem img {
+    width: 60%; /* Reduz a largura da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra suave */
+}
+
+/* === ESTILO DO FORMULÁRIO DE ALTERNATIVAS === */
+.formulario {
+    display: flex;
+    flex-direction: column; /* Coloca as opções em coluna */
+    gap: 15px; /* Espaço entre elas */
+    margin-top: 20px;
+}
+
+/* === CADA OPÇÃO DE RESPOSTA === */
+.opcao {
+    background-color: #fdfdfd; /* Fundo branco */
+    border: 2px solid #ccd4d9; /* Borda cinza clara */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 12px 20px; /* Espaçamento interno */
+    display: flex; /* Alinha o rádio e o texto na mesma linha */
+    align-items: center;
+    gap: 10px; /* Espaço entre o botão e o texto */
+    cursor: pointer; /* Mostra a “mãozinha” ao passar o mouse */
+    transition: 0.3s ease; /* Animação suave em hover */
+    font-weight: 500; /* Texto levemente em negrito */
+}
+
+/* Efeito visual ao passar o mouse sobre a opção */
+.opcao:hover {
+    background-color: #eaf2ff; /* Fundo azul clarinho */
+    border-color: #003366; /* Borda azul mais forte */
+    transform: scale(1.02); /* Aumenta levemente a opção */
+}
+
+/* === PERSONALIZAÇÃO DO BOTÃO DE RÁDIO === */
+.opcao input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão do navegador */
+    width: 22px;
+    height: 22px;
+    border: 2px solid #003366; /* Borda azul escura */
+    border-radius: 50%; /* Torna o botão circular */
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Efeito quando o botão está marcado */
+.opcao input[type="radio"]:checked {
+    background-color: #003366; /* Preenche com azul escuro */
+    box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.2); /* Efeito de “aura” azul */
+}
+
+/* Texto de cada alternativa */
+.texto-opcao {
+    font-size: 18px;
+    color: #1a1a1a; /* Cinza escuro para boa leitura */
+}
+
+/* === BOTÃO DE VERIFICAÇÃO === */
+button {
+    background-color: #003366; /* Azul escuro */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+    align-self: center; /* Centraliza dentro do formulário */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #00509e; /* Azul mais claro */
+    transform: scale(1.05); /* Efeito de leve aumento */
+}
+
+/* === MENSAGEM DE FEEDBACK === */
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center; /* Centraliza o texto */
+}
